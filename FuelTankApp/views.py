@@ -24,7 +24,7 @@ from django.views.decorators.csrf import csrf_exempt
 def HomePage(request):
 
     today = datetime.now()
-    
+    print("yessss")
     
     seven_days_ago = today - timedelta(days=7)
     azone_data = HoleDB.objects.filter(DateTime__date__gte=seven_days_ago, DateTime__date__lte=today).values_list('azone', flat=True)
